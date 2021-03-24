@@ -26,7 +26,7 @@ function display(city) {
     if (request.status === 200) {
       var dataObject = JSON.parse(request.response);
       document.getElementById("risposta").innerHTML =
-        "A " + city + " ci sono " + dataObject.main.temp + " gradi";
+        "A " + city + " ci sono " + dataObject.main.temp + " gradi e " + dataObject.main.pressure + " hPa di pressione";
     } else {
       document.getElementById("risposta").innerText = "Errore";
     }
