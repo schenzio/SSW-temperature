@@ -58,7 +58,7 @@ function tempMedia(citiesList){
         var dataObject = JSON.parse(request.response);
         var temp = dataObject.main.temp;
         sommaTemp+=temp;
-        document.getElementById("risposta").innerText = "La temperatura media a Genova, Torino, Milano, Pisa e Roma è " + sommaTemp/nCities + "gradi";
+        document.getElementById("risposta").innerText = "La temperatura media tra queste città è " + sommaTemp/nCities + " gradi";
       } else {
         document.getElementById("risposta").innerText = "Errore";
      }
