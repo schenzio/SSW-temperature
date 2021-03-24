@@ -4,11 +4,19 @@ import "./style.css";
 var cityElems = Array.from(document.getElementsByClassName("città"));
 for (let elem of cityElems ) {
   elem.onclick = () => display(elem.innerHTML);
+  elem.onmouseover = () => overColor(elem);
+  elem.onmouseleave = () => leaveColor(elem);
 }
 
 // Funzione collegata ai bottoni
 // "window" necessario in StackBlitz, può essere
 // omesso altrimenti
+function overColor(elem){
+  elem.style.backgroundColor = "blue";
+}
+function leaveColor(elem){
+  elem.style.backgroundColor = "#e6e6e6";
+}
 function display(city) {
   var request = new XMLHttpRequest(); // Costruzione dell'oggetto "request"
 
